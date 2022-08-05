@@ -1,0 +1,7 @@
+<li class="list-group-item d-flex flex-row justify-content-between">
+    <span>{{id}}.</span><p>{{textValue}}</p>
+    <div>
+        <button class="btn btn-primary m-2 btn-sm" (click)="emitIdToUpdate()">Edit</button>
+        <button class="btn btn-danger m-2 btn-sm" (click)="emitIdToDelete()">Delete</button>
+    </div>
+</li>
