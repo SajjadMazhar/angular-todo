@@ -18,7 +18,7 @@ export class AppComponent {
     id:1
   }]
   isUpdate = "Updating...";
-  
+
   public isUpdating:boolean = false;
   public updatingId!:number
   
@@ -49,9 +49,9 @@ export class AppComponent {
     if($event.type === "delete"){
       this.items = this.items.filter(item=> item.id !== $event.id)
     }else if($event.type === "update"){
-      this.isUpdating = true
+      this.isUpdating = true;
       this.textValue = $event.value
-      this.updatingId = $event.id
+      this.updatingId = $event.id;
     }
   }
 }

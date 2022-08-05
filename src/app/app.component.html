@@ -5,7 +5,12 @@
   </div>
   <div class="d-flex flex-column my-3 text-start">
     <ul class="list-group list-group-flush">
-      <app-item *ngFor="let item of items" [textValue]="item.itemValue" [id]="item.id" [items]="items" (idEmitter)="actionOnItem($event)"></app-item>
+      <app-item 
+      *ngFor="let item of items" 
+      [textValue]="item.itemValue" 
+      [id]="item.id" [items]="items" 
+      (idEmitter)="actionOnItem($event)"
+      ></app-item>
     </ul>
   </div>
 </div>

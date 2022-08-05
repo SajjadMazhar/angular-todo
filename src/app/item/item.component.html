@@ -1,7 +1,11 @@
 <li class="list-group-item d-flex flex-row justify-content-between">
-    <span>{{id}}.</span><p>{{textValue}}</p>
+    <span>{{id}}.</span>
+    <div *ngIf="isDone; then doneblock; else undoneblock"></div>
+    <ng-template #doneblock ><p style="text-decoration: line-through;">{{textValue}}</p></ng-template>
+    <ng-template #undoneblock ><p>{{textValue}}</p></ng-template>
     <div>
         <button class="btn btn-primary m-2 btn-sm" (click)="emitIdToUpdate()">Edit</button>
         <button class="btn btn-danger m-2 btn-sm" (click)="emitIdToDelete()">Delete</button>
+        <button class="btn btn-success m-2 btn-sm" (click)="emitIdToBeDone()">{{isDone?"Undone":"Done"}}</button>
     </div>
 </li>
